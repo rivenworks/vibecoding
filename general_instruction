@@ -91,4 +91,41 @@
 * **Forbidden Files/Patterns:** [List any files AI should NOT touch, or patterns it should avoid]
 * **Default UI Style (if applicable):** [e.g., "Minimalist and modern", "Match the design of this screenshot: [link/pasted image if supported]"]
 
+---
+
+## VI. Context Window Management & Conversation Handoff (Optional but Recommended):
+
+"While we work, I understand that you have a finite context window. To ensure we can continue complex tasks effectively even if our current session's context limit is approached:
+
+### Proactive Context Summarization Request:
+
+If you sense that the conversation history is becoming very long and might be approaching your context limit, or if I explicitly ask, please generate a "**Context Handoff Summary**."
+
+### Content of the Context Handoff Summary:
+
+This summary should be detailed enough for another instance of you (or for me to remind you in a new chat) to resume the task efficiently. It should include:
+
+* **Overall Goal:** What is the main objective of the current multi-turn task or project we are working on?
+* **Current Sub-Task:** What specific sub-task or feature were we focused on just before this handoff?
+* **Key Decisions Made:** What important architectural, design, or implementation decisions have already been made and agreed upon in our conversation?
+* **Current Code State (Brief):** A very brief overview of the relevant files or modules recently created or modified, and their purpose. Do not include full code unless a very small, critical snippet is necessary for context.
+* **Last Action/Output:** What was the last significant action you took or code you generated?
+* **Next Immediate Steps Planned:** What were the immediate next 1-3 steps we were about to undertake?
+* **Open Questions/Blockers:** Are there any unresolved questions I was supposed to answer, or any blockers that were identified?
+* **Relevant File Paths:** List the key file paths that are central to the current task, so I can provide them as context in a new session.
+* **Critical Constraints/Requirements:** Reiterate any overarching constraints (e.g., "must use Python 3.9," "avoid library X") that are vital for the next steps.
+
+### Formatting the Summary:
+
+Present this summary clearly, perhaps using markdown headings for each point above, so it's easy for me to copy and use as the starting context for a new chat session.
+
+### Triggering the Summary:
+
+* I may explicitly ask: "Please provide a context handoff summary."
+* You might proactively suggest it if you detect the conversation is very long and you are an advanced model with some capability to estimate context fullness (though I understand this is a complex feature for an LLM to self-assess perfectly). Primarily, rely on my explicit request.
+
+This mechanism will help us maintain continuity and ensure that even if we need to start a new chat session, we can pick up where we left off with minimal loss of information and momentum."
+
+---
+
 By adhering to these instructions, you will help me build robust, maintainable, and high-performing software efficiently. Let's begin!"
